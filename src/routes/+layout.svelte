@@ -1,45 +1,53 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+	import { onMount } from 'svelte';
+	import '$lib/styles/app.css';
+	
+	onMount(() => {
+		const katexify = () => {
+			renderMathInElement(document.body, {
+				delimiters: [
+					{
+						left: '$$',
+						right: '$$',
+						display: true
+					},
+					{
+						left: '!$',
+						right: '!$',
+						display: false
+					}
+				]
+			});
+		};
+        katexify();
+	});
+	
 </script>
 
-<Header />
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css"
+		integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/"
+		crossorigin="anonymous"
+	/>
 
-<main>
-	<slot />
-</main>
+	<!-- The loading of KaTeX is deferred to speed up page rendering -->
+	<script
+		
+		src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js"
+		integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O"
+		crossorigin="anonymous"
+	></script>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+	<!-- To automatically render math in text elements, include the auto-render extension: -->
+	<script
+		
+		src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js"
+		integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+		crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"
+	></script>
+</svelte:head>
 
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
-</style>
+<slot />
