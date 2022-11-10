@@ -1,5 +1,5 @@
 <script>
-	import { fade } from 'svelte/transition';
+	import { fade } from "svelte/transition";
 
 	let displayAnswer = false;
 	let displaySolution = false;
@@ -13,7 +13,7 @@
 </script>
 
 <section class="problem" transition:fade>
-	<div class="statement"><slot name="problemStatement" /></div>
+	<div class="statement"><p><slot name="problemStatement" /></p></div>
 </section>
 
 <style lang="scss">
@@ -24,17 +24,18 @@
 			padding: 1.5%;
 		}
 		.statement {
-            display: inline;
 			line-height: 1;
-			
-			
-			
+
+			p {
+				margin-top: 0.5em;
+				margin-bottom: 0;
+			}
 
 			&::before {
-                display:inline;
-                font-weight: bold;
+				position: relative;
+				font-weight: bold;
 				counter-increment: problem-counter;
-				content: 'Problem ' counter(problem-counter) '. ';
+				content: "Problem " counter(problem-counter) ". ";
 			}
 		}
 	}
