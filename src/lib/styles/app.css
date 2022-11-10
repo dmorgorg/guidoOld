@@ -1,5 +1,7 @@
 :root {
   --bg: #fff;
+  --statics-primary: #800;
+  --strength-primary: #880;
   --fluids-primary: #088;
   --main-grey: #ddd;
   --off-black: #333;
@@ -28,6 +30,23 @@ body {
 
 .fluids h3 {
   color: var(--fluids-primary);
+}
+.fluids section .statement::before {
+  color: var(--fluids-primary);
+}
+
+.statics h3 {
+  color: var(--statics-primary);
+}
+.statics section .statement::before {
+  color: var(--statics-primary);
+}
+
+.strength h3 {
+  color: var(--strength-primary);
+}
+.strength section .statement::before {
+  color: var(--strength-primary);
 }
 
 .katex {

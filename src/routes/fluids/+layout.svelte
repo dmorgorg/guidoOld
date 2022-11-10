@@ -1,25 +1,30 @@
 <script>
-	import { onMount } from 'svelte';
-	import '$lib/styles/app.css';
+	import { onMount, afterUpdate } from "svelte";
+	import "$lib/styles/app.css";
+	let katexify;
 
 	onMount(() => {
-		const katexify = () => {
+		 katexify = () => {
 			renderMathInElement(document.body, {
 				delimiters: [
 					{
-						left: '$$',
-						right: '$$',
-						display: true
+						left: "$$",
+						right: "$$",
+						display: true,
 					},
 					{
-						left: '!$',
-						right: '!$',
-						display: false
-					}
-				]
+						left: "!$",
+						right: "!$",
+						display: false,
+					},
+				],
 			});
 		};
-        katexify();
+		katexify();
+	});
+	// might only need this during development?
+	afterUpdate(() => {
+		katexify();
 	});
 </script>
 

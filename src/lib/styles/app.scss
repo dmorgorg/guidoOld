@@ -1,5 +1,7 @@
 :root {
     --bg: #fff;
+    --statics-primary: #800;
+    --strength-primary: #880;
     --fluids-primary: #088;
     --main-grey: #ddd;
     --off-black: #333;
@@ -32,9 +34,45 @@ body {
         color: var(--fluids-primary);
     }
 
-    // section.problem::before {
+    section .statement::before {
+        color: var(--fluids-primary);
+    }
+
+    // button {
     //     color: var(--fluids-primary);
+
+    //     &:hover {
+    //         background-color: var(--fluids-primary);
+    //     }
     // }
+}
+
+.statics {
+    h3 {
+        color: var(--statics-primary);
+    }
+
+    section .statement::before {
+        color: var(--statics-primary);
+    }
+
+    // button {
+    //     color: var(--fluids-primary);
+
+    //     &:hover {
+    //         background-color: var(--fluids-primary);
+    //     }
+    // }
+}
+
+.strength {
+    h3 {
+        color: var(--strength-primary);
+    }
+
+    section .statement::before {
+        color: var(--strength-primary);
+    }
 
     // button {
     //     color: var(--fluids-primary);
@@ -46,7 +84,7 @@ body {
 }
 
 .katex {
-    font-size:105%;
+    font-size: 105%;
     // font-weight: 700;
 }
 

@@ -1,6 +1,12 @@
+export const topMatter = {
+    
+    course: 'statics', // statics, strength
+    courseModule: 'open channel flow'
+}
+
 export default [
     // section, or sub-type of course module
-    `rectangular channel`,
+    'rectangular channel',
     [
         `A rectangular channel has a width of !$4.00\\,\\mathsf{m}!$ and a slope of !$0.1\\%!$. 
         For a discharge of !$4.80\\,\\mathsf{m^3\\!/s}!$, the depth is measured to be !$850\\,\\mathsf{mm}!$. 

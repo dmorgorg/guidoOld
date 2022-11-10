@@ -2,14 +2,14 @@
 	import Header from '$lib/components/Header.svelte';
 	import Problem from '$lib/components/Problem.svelte';
 
-	import problems from './problems';
+	import problems, { topMatter} from './problems';
 
-	let course = 'fluids';
-	let courseModule = 'open channel flow';
+	let course = topMatter.course;
+	let courseModule = topMatter.courseModule;
 </script>
 
 <!-- change class for 'statics', 'strength', etc -->
-<div class="page fluids">
+<div class="page {course}">
 	<Header {course} {courseModule} />
 
 	<main>

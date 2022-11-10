@@ -14,6 +14,7 @@
 
 <section class="problem" transition:fade>
 	<div class="statement"><p><slot name="problemStatement" /></p></div>
+	<div class="show-hide-control">test</div>
 </section>
 
 <style lang="scss">
@@ -37,6 +38,15 @@
 				counter-increment: problem-counter;
 				content: "Problem " counter(problem-counter) ". ";
 			}
+		}
+		.show-hide-control {
+			// background-color: white;
+			margin-right: 2.5%;
+			margin-top: 1em;
+			padding: 0;
+			text-align: right;
+			// float: right;
+			border: 1px solid black;
 		}
 	}
 </style>
