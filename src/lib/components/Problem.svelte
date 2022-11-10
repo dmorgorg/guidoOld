@@ -1,0 +1,41 @@
+<script>
+	import { fade } from 'svelte/transition';
+
+	let displayAnswer = false;
+	let displaySolution = false;
+
+	function toggleAnswer(event) {
+		displayAnswer = !displayAnswer;
+	}
+	function toggleSolution(event) {
+		displaySolution = !displaySolution;
+	}
+</script>
+
+<section class="problem" transition:fade>
+	<div class="statement"><slot name="problemStatement" /></div>
+</section>
+
+<style lang="scss">
+	section {
+		&.problem {
+			box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgba(0, 0, 0, 0.25);
+			margin: 1.25em 1.75em;
+			padding: 1.5%;
+		}
+		.statement {
+            display: inline;
+			line-height: 1;
+			
+			
+			
+
+			&::before {
+                display:inline;
+                font-weight: bold;
+				counter-increment: problem-counter;
+				content: 'Problem ' counter(problem-counter) '. ';
+			}
+		}
+	}
+</style>

@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import '$lib/styles/app.css';
-	
+
 	onMount(() => {
 		const katexify = () => {
 			renderMathInElement(document.body, {
@@ -21,7 +21,6 @@
 		};
         katexify();
 	});
-	
 </script>
 
 <svelte:head>
@@ -34,7 +33,7 @@
 
 	<!-- The loading of KaTeX is deferred to speed up page rendering -->
 	<script
-		
+		defer
 		src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js"
 		integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O"
 		crossorigin="anonymous"
@@ -42,7 +41,7 @@
 
 	<!-- To automatically render math in text elements, include the auto-render extension: -->
 	<script
-		
+		defer
 		src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js"
 		integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
 		crossorigin="anonymous"
