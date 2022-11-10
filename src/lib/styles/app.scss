@@ -56,13 +56,15 @@ body {
         color: var(--statics-primary);
     }
 
-    // button {
-    //     color: var(--fluids-primary);
+    button {
+        color: var(--statics-primary);
+        background-color: var(--main-grey);
 
-    //     &:hover {
-    //         background-color: var(--fluids-primary);
-    //     }
-    // }
+        &:hover {
+            background-color: var(--statics-primary);
+            
+        }
+    }
 }
 
 .strength {
@@ -74,13 +76,14 @@ body {
         color: var(--strength-primary);
     }
 
-    // button {
-    //     color: var(--fluids-primary);
+    button {
+        color: var(--strength-primary);
+        background-color: var(--main-grey);
 
-    //     &:hover {
-    //         background-color: var(--fluids-primary);
-    //     }
-    // }
+        &:hover {
+            background-color: var(--strength-primary);
+        }
+    }
 }
 
 .katex {

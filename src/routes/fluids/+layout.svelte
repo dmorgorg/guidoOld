@@ -25,6 +25,7 @@
 	// might only need this during development?
 	afterUpdate(() => {
 		katexify();
+		katexify();
 	});
 </script>
 

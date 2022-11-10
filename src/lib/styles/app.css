@@ -41,12 +41,26 @@ body {
 .statics section .statement::before {
   color: var(--statics-primary);
 }
+.statics button {
+  color: var(--statics-primary);
+  background-color: var(--main-grey);
+}
+.statics button:hover {
+  background-color: var(--statics-primary);
+}
 
 .strength h3 {
   color: var(--strength-primary);
 }
 .strength section .statement::before {
   color: var(--strength-primary);
+}
+.strength button {
+  color: var(--strength-primary);
+  background-color: var(--main-grey);
+}
+.strength button:hover {
+  background-color: var(--strength-primary);
 }
 
 .katex {

@@ -14,7 +14,22 @@
 
 <section class="problem" transition:fade>
 	<div class="statement"><p><slot name="problemStatement" /></p></div>
-	<div class="show-hide-control">test</div>
+	<div class="show-hide-control">
+		<button on:click={toggleSolution}>
+			{#if displaySolution}
+				Hide Solution
+			{:else}
+				Show Solution
+			{/if}
+		</button>
+		<button on:click={toggleAnswer}>
+			{#if displayAnswer}
+				Hide Answer
+			{:else}
+				Check Answer
+			{/if}
+		</button>
+	</div>
 </section>
 
 <style lang="scss">
@@ -40,13 +55,25 @@
 			}
 		}
 		.show-hide-control {
-			// background-color: white;
-			margin-right: 2.5%;
+			// 	// background-color: white;
+			// margin-right: 2.5%;
 			margin-top: 1em;
 			padding: 0;
 			text-align: right;
-			// float: right;
-			border: 1px solid black;
+
+			button {
+				font-size: 85%;
+				vertical-align: middle;
+				padding: 0.75%;
+				margin-left: 1em;
+				min-width: 8em;
+				box-shadow: none;
+				border: 1px solid black;
+
+				&:hover {
+					color: white;
+				}
+			}
 		}
 	}
 </style>

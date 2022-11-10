@@ -1,8 +1,8 @@
 <script>
-	import Header from '$lib/components/Header.svelte';
-	import Problem from '$lib/components/Problem.svelte';
+	import Header from "$lib/components/Header.svelte";
+	import Problem from "$lib/components/Problem.svelte";
 
-	import problems, { topMatter} from './problems';
+	import problems, { topMatter } from "./problems";
 
 	let course = topMatter.course;
 	let courseModule = topMatter.courseModule;
@@ -14,7 +14,7 @@
 
 	<main>
 		{#each problems as problem}
-			{#if typeof problem === 'string'}
+			{#if typeof problem === "string"}
 				<h3 class="subsectionHeader">{problem}</h3>
 			{:else}
 				<Problem>
@@ -38,7 +38,7 @@
 
 	main {
 		counter-reset: section-counter;
-        overflow-y: auto;
+		overflow-y: auto;
 		padding: 0 15vw;
 	}
 
@@ -57,6 +57,6 @@
 
 	h3::before {
 		counter-increment: section-counter;
-		content: counter(section-counter) '. ';
+		content: counter(section-counter) ". ";
 	}
 </style>
