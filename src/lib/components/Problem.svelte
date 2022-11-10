@@ -29,6 +29,20 @@
 				Check Answer
 			{/if}
 		</button>
+		<div
+			transition:fade={{ duration: 2000 }}
+			class:show={displayAnswer}
+			class:hide={!displayAnswer}
+		>
+			display answer
+		</div>
+		<div
+			transition:fade={{ duration: 2000 }}
+			class:show={displaySolution}
+			class:hide={!displaySolution}
+		>
+			display solution
+		</div>
 	</div>
 </section>
 
@@ -55,25 +69,38 @@
 			}
 		}
 		.show-hide-control {
+			// display: inline-block;
 			// 	// background-color: white;
 			// margin-right: 2.5%;
-			margin-top: 1em;
-			padding: 0;
+			margin-top: 0.5em;
+			// padding: 0;
 			text-align: right;
+			// float: right;
 
 			button {
 				font-size: 85%;
 				vertical-align: middle;
 				padding: 0.75%;
-				margin-left: 1em;
+				margin: 0.5em;
+				margin-bottom: 0;
 				min-width: 8em;
-				box-shadow: none;
+				// box-shadow: none;
 				border: 1px solid black;
 
 				&:hover {
 					color: white;
 				}
 			}
+		}
+		.hide {
+			transition: all 3.5s ease-out;
+			display: none;
+			visibility: hidden;
+		}
+		.show {
+			transition: all 3.5s ease-out;
+			display: block;
+			visibility: visible;
 		}
 	}
 </style>

@@ -1,14 +1,13 @@
 <script>
-	export let courseModule = '';
-	export let course = 'fluids';
+	export let topMatter;
 </script>
 
 <header>
 	<div class='left'>
-		<h3><a href='/'>worked problems</a> ::</h3> 
-		<h3><a href='/{course}'>{course}</a></h3>
+		<h3><a href='/'>{topMatter.description}</a> ::</h3> 
+		<h3><a href='/{topMatter.course}'>{topMatter.course}</a></h3>
 	</div>
-	<h3 class='courseModule'>{courseModule}</h3>
+	<h3 class='courseModule'>{topMatter.courseModule}</h3>
 </header>
 
 <style>
@@ -35,9 +34,10 @@
 		text-decoration: none;
 	}
 
-	.courseModule {
-		text-align: right;
-	}
+	/* .courseModule {
+		text-align: left;
+		border: 1px solid green;
+	} */
 
 	.left {
 		margin-right: 2em;

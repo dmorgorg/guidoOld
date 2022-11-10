@@ -10,7 +10,7 @@
 
 <!-- change class for 'statics', 'strength', etc -->
 <div class="page {course}">
-	<Header {course} {courseModule} />
+	<Header {topMatter} />
 
 	<main>
 		{#each problems as problem}

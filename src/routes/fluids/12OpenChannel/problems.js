@@ -1,5 +1,5 @@
 export const topMatter = {
-    
+    description: 'guided practice',
     course: 'statics', // statics, strength
     courseModule: 'open channel flow'
 }
