@@ -1,11 +1,13 @@
 <script>
 	import Header from "$lib/components/Header.svelte";
 	import Problem from "$lib/components/Problem.svelte";
-
+	import Solution from "$lib/components/Solution.svelte";
+	import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
+	
 	import problems, { topMatter } from "./problems";
 
 	let course = topMatter.course;
-	let courseModule = topMatter.courseModule;
+	// let courseModule = topMatter.courseModule;
 </script>
 
 <!-- change class for 'statics', 'strength', etc -->
@@ -15,10 +17,14 @@
 	<main>
 		{#each problems as problem}
 			{#if typeof problem === "string"}
-				<h3 class="subsectionHeader">{problem}</h3>
+				<SubsectionHeader subsectionHeader={problem} />
 			{:else}
-				<Problem>
-					<div slot="problemStatement">{problem[0]}</div>
+				<Problem {problem}>
+					
+					<div slot="solution">
+						<Solution {problem} />
+					</div>
+					<div slot="answer">answer is here</div>
 				</Problem>
 			{/if}
 		{/each}
@@ -40,23 +46,5 @@
 		counter-reset: section-counter;
 		overflow-y: auto;
 		padding: 0 15vw;
-	}
-
-	/* e.g. Rectangular Channel, subsection of Open Channel Flow */
-	h3.subsectionHeader {
-		counter-reset: problem-counter;
-		font-size: 150%;
-		margin: 3em auto 0 auto;
-		text-shadow: 0 0 1px rgba(0, 0, 0, 0.75);
-		text-transform: capitalize;
-	}
-
-	h3:first-of-type {
-		margin-top: 1em;
-	}
-
-	h3::before {
-		counter-increment: section-counter;
-		content: counter(section-counter) ". ";
 	}
 </style>
