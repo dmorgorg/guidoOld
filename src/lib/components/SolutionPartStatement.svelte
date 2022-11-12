@@ -1,18 +1,27 @@
-<!-- <script>
-	katexify();
-</script> -->
+
 
 <article class="statement">
+	<h4>&nbsp;</h4>
 	<slot />
 </article>
 
-<style>
+<style lang="scss">
 	article.statement {
+		position: relative;
 		background-color: white;
-		vertical-align: top;
-		margin-left: 1.25%;
-		margin-top: 0;
+		margin-top: 1em;
 		padding: 0;
-		width: 98.75%;
+		
+
+		h4 {
+			// border: 1px solid black;
+			display: inline;
+			// font-size: 90%;
+
+			&::before {	
+				counter-increment: part-counter;							
+				content: "Part " counter(part-counter) ": ";
+			}
+		}
 	}
 </style>

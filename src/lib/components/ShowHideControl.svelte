@@ -1,11 +1,14 @@
 <script>
     export let showHide;
 
+    $: displaySolution = showHide.displaySolution;
+    $: displayAnswer = showHide.displayAnswer;
+
     function toggleAnswer(event) {
-        showHide.displayAnswer = !showHide.displayAnswer;
+        showHide.displayAnswer = !displayAnswer;
     }
     function toggleSolution(event) {
-        showHide.displaySolution = !showHide.displaySolution;
+        showHide.displaySolution = !displaySolution;
     }
 </script>
 
@@ -28,13 +31,8 @@
 
 <style lang="scss">
     .show-hide-control {
-        // display: inline-block;
-        // 	// background-color: white;
-        // margin-right: 2.5%;
         margin-top: 0.5em;
-        // padding: 0;
         text-align: right;
-        // float: right;
 
         button {
             font-size: 85%;
@@ -43,7 +41,6 @@
             margin: 0.5em;
             margin-bottom: 0;
             min-width: 8em;
-            // box-shadow: none;
             border: 1px solid black;
 
             &:hover {

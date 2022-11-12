@@ -34,8 +34,15 @@ body {
 .fluids section .statement::before {
   color: var(--fluids-primary);
 }
+.fluids button {
+  color: var(--fluids-primary);
+  background-color: var(--main-grey);
+}
+.fluids button:hover {
+  background-color: var(--fluids-primary);
+}
 
-.statics h3 {
+.statics h3, .statics h4 {
   color: var(--statics-primary);
 }
 .statics section .statement::before {
@@ -49,7 +56,7 @@ body {
   background-color: var(--statics-primary);
 }
 
-.strength h3 {
+.strength h3, .strength h4 {
   color: var(--strength-primary);
 }
 .strength section .statement::before {

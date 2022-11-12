@@ -3,33 +3,34 @@
 
 	import ProblemStatement from "./ProblemStatement.svelte";
 	import ShowHideControl from "./ShowHideControl.svelte";
-
+    import Solution from "./Solution.svelte";
 	export let problem;
 
-	// let displayAnswer = false;
-	// let displaySolution = false;
 	let showHide = {
 		displayAnswer: false,
-		displaySolution: false
-	}
+		displaySolution: false,
+	};
 
-	// function toggleAnswer(event) {
-	// 	showHide.displayAnswer = !showHide.displayAnswer;
-	// }
-	// function toggleSolution(event) {
-	// 	showHide.displaySolution = !showHide.displaySolution;
-	// }
+	$: displaySolution = showHide.displaySolution;
+	$: displayAnswer = showHide.displayAnswer;
 </script>
 
 <section class="problem" transition:fade>
 	<ProblemStatement {problem} />
-	<ShowHideControl bind:showHide />
-	
 
-	<div class:show={showHide.displaySolution} class:hide={!showHide.displaySolution}>
-		<slot name="solution" />
-	</div>
-	<div class:show={showHide.displayAnswer} class:hide={!showHide.displayAnswer}>
+	<!-- check whether there are solutions provided -->
+	{#if problem[1]}
+		<!-- show or hide solution parts or answer  -->
+		<ShowHideControl bind:showHide />
+		<!-- 	creating solution in {#if ...} doesn't render the latex so use
+				css to hide/show the solution 		-->
+		<div class:show={displaySolution} class:hide={!displaySolution}>
+			<Solution {problem} />
+			<!-- <div slot="answer">answer is here</div> -->
+		</div>
+	{/if}
+
+	<div class:show={displayAnswer} class:hide={!displayAnswer}>
 		<slot name="answer" />
 	</div>
 </section>
@@ -41,7 +42,7 @@
 			margin: 1.25em 1.75em;
 			padding: 1.5%;
 		}
-		
+
 		.hide {
 			// transition: all 3.5s ease-out;
 			display: none;

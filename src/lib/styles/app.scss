@@ -30,7 +30,7 @@ body {
 }
 
 .fluids {
-    h3 {
+    h3{
         color: var(--fluids-primary);
     }
 
@@ -38,17 +38,19 @@ body {
         color: var(--fluids-primary);
     }
 
-    // button {
-    //     color: var(--fluids-primary);
+    button {
+        color: var(--fluids-primary);
+        background-color: var(--main-grey);
 
-    //     &:hover {
-    //         background-color: var(--fluids-primary);
-    //     }
-    // }
+        &:hover {
+            background-color: var(--fluids-primary);
+            
+        }
+    }
 }
 
 .statics {
-    h3 {
+    h3, h4 {
         color: var(--statics-primary);
     }
 
@@ -68,7 +70,7 @@ body {
 }
 
 .strength {
-    h3 {
+    h3, h4 {
         color: var(--strength-primary);
     }
 

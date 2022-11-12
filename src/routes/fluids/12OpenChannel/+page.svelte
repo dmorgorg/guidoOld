@@ -1,31 +1,24 @@
 <script>
 	import Header from "$lib/components/Header.svelte";
 	import Problem from "$lib/components/Problem.svelte";
-	import Solution from "$lib/components/Solution.svelte";
 	import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
-	
+
 	import problems, { topMatter } from "./problems";
 
 	let course = topMatter.course;
-	// let courseModule = topMatter.courseModule;
 </script>
 
-<!-- change class for 'statics', 'strength', etc -->
+<!-- change class/theme for 'statics', 'strength', etc -->
 <div class="page {course}">
 	<Header {topMatter} />
 
 	<main>
 		{#each problems as problem}
 			{#if typeof problem === "string"}
+				<!-- e.g. Rectangular Channel, Triangular Channel, ... -->
 				<SubsectionHeader subsectionHeader={problem} />
 			{:else}
-				<Problem {problem}>
-					
-					<div slot="solution">
-						<Solution {problem} />
-					</div>
-					<div slot="answer">answer is here</div>
-				</Problem>
+				<Problem {problem} />
 			{/if}
 		{/each}
 	</main>
