@@ -100,6 +100,14 @@ body {
     }
 }
 
+img {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
 .katex {
     font-size: 105%;
     padding: 0;
@@ -115,6 +123,14 @@ body {
 .show {
     // transition: all 3.5s ease-out;
     display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.fright {
+    float: right;
 }
 
 

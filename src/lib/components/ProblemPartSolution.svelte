@@ -2,7 +2,7 @@
     export let solution;
 </script>
 
-<div>{solution}</div>
+<div>{@html solution}</div>
 
 <style>
     div {

@@ -78,6 +78,14 @@ body {
   background-color: var(--strength-primary);
 }
 
+img {
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
 .katex {
   font-size: 105%;
   padding: 0;
@@ -90,6 +98,14 @@ body {
 
 .show {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.fright {
+  float: right;
 }
 
 .width100 {

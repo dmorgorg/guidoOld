@@ -4,7 +4,7 @@
 
 <article class="statement">
     <p>
-        {problem[0]}
+        {@html problem[0]}
     </p>
 </article>
 
