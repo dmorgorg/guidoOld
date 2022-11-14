@@ -3,7 +3,7 @@
 
 	import ProblemStatement from "./ProblemStatement.svelte";
 	import ShowHideControl from "./ShowHideControl.svelte";
-    import Solution from "./Solution.svelte";
+	import ProblemParts from "./ProblemParts.svelte";
 	export let problem;
 
 	let showHide = {
@@ -21,11 +21,13 @@
 	<!-- check whether there are solutions provided -->
 	{#if problem[1]}
 		<!-- show or hide solution parts or answer  -->
-		<ShowHideControl bind:showHide />
+		<div class="show-hide-control">
+			<ShowHideControl bind:showHide />
+		</div>
 		<!-- 	creating solution in {#if ...} doesn't render the latex so use
 				css to hide/show the solution 		-->
 		<div class:show={displaySolution} class:hide={!displaySolution}>
-			<Solution {problem} />
+			<ProblemParts {problem} />
 			<!-- <div slot="answer">answer is here</div> -->
 		</div>
 	{/if}
@@ -40,16 +42,13 @@
 		&.problem {
 			box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgba(0, 0, 0, 0.25);
 			margin: 1.25em 1.75em;
-			padding: 1.5%;
+			padding: 1rem;
+			padding-bottom: 1em;
 		}
 
-		.hide {
-			// transition: all 3.5s ease-out;
-			display: none;
-		}
-		.show {
-			// transition: all 3.5s ease-out;
-			display: block;
+		
+		.show-hide-control {
+			margin-right: 0.5em;
 		}
 	}
 </style>

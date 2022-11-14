@@ -14,14 +14,14 @@
 
 <div class="show-hide-control">
     <button on:click={toggleSolution}>
-        {#if showHide.displaySolution}
+        {#if displaySolution}
             Hide Solution
         {:else}
             Show Solution
         {/if}
     </button>
     <button on:click={toggleAnswer}>
-        {#if showHide.displayAnswer}
+        {#if displayAnswer}
             Hide Answer
         {:else}
             Check Answer
@@ -30,16 +30,18 @@
 </div>
 
 <style lang="scss">
-    .show-hide-control {
-        margin-top: 0.5em;
+    .show-hide-control {  
+        flex-grow:10;     
         text-align: right;
+        // margin: 0 0.5em;
+        padding: 0;
+        // border: 1px solid green;
 
         button {
-            font-size: 85%;
+            font-size: 1em;
             vertical-align: middle;
-            padding: 0.75%;
-            margin: 0.5em;
-            margin-bottom: 0;
+            padding: 0.075rem;
+            margin-left: 1em;
             min-width: 8em;
             border: 1px solid black;
 

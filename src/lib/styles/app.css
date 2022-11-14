@@ -25,6 +25,7 @@ html {
 body {
   color: var(off-black);
   margin: 0;
+  overflow-y: hidden;
   padding: 0;
 }
 
@@ -41,8 +42,14 @@ body {
 .fluids button:hover {
   background-color: var(--fluids-primary);
 }
+.fluids .part-answer .katex {
+  color: var(--fluids-primary);
+  font-size: 120%;
+  margin: 0;
+}
 
-.statics h3, .statics h4 {
+.statics h3,
+.statics h4 {
   color: var(--statics-primary);
 }
 .statics section .statement::before {
@@ -56,7 +63,8 @@ body {
   background-color: var(--statics-primary);
 }
 
-.strength h3, .strength h4 {
+.strength h3,
+.strength h4 {
   color: var(--strength-primary);
 }
 .strength section .statement::before {
@@ -72,6 +80,18 @@ body {
 
 .katex {
   font-size: 105%;
+  padding: 0;
+  margin: 0;
+}
+
+.hide {
+  position: absolute;
+  visibility: hidden;
+  transition: all 3s;
+}
+
+.show {
+  display: block;
 }
 
 .width100 {

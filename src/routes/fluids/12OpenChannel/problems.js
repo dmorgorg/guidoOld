@@ -23,9 +23,15 @@ export default [
             [
                 `Find !$\\large v_{(0.850\\,\\mathsf{m})} !$`,
 
-                `$$\\begin{aligned}
-                    A &= 4.00\\cdot 0.850 \\\\
-                    &= 3.4000\\,\\mathsf{m^2} \\\\\\\\
+                `
+                Calculate the cross-sectional area of the channel:
+                $$\\begin{aligned}
+                    A &= \\textsf{base}\\times\\textsf{depth} \\\\
+                    &= 4.00\\cdot 0.850 \\\\
+                    &= 3.4000\\,\\mathsf{m^2} 
+                \\end{aligned}$$
+                Calculate the velocity:
+                $$\\begin{aligned}
                     v &= Q/A \\\\
                     &= \\frac{4.80\\,\\mathsf{m^3\\!/s}}{3.4000\\,\\mathsf{m^2}} \\\\
                     &= 1.4118\\,\\mathsf{m/s}
