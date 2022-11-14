@@ -48,8 +48,7 @@ body {
   margin: 0;
 }
 
-.statics h3,
-.statics h4 {
+.statics h3 {
   color: var(--statics-primary);
 }
 .statics section .statement::before {
@@ -62,9 +61,13 @@ body {
 .statics button:hover {
   background-color: var(--statics-primary);
 }
+.statics .part-answer .katex {
+  color: var(--statics-primary);
+  font-size: 120%;
+  margin: 0;
+}
 
-.strength h3,
-.strength h4 {
+.strength h3 {
   color: var(--strength-primary);
 }
 .strength section .statement::before {
@@ -76,6 +79,11 @@ body {
 }
 .strength button:hover {
   background-color: var(--strength-primary);
+}
+.strength .part-answer .katex {
+  color: var(--strength-primary);
+  font-size: 120%;
+  margin: 0;
 }
 
 img {

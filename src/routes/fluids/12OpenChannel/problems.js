@@ -1,6 +1,6 @@
 export const topMatter = {
     description: 'guided practice',
-    course: 'fluids', // statics, strength
+    course: 'fluids', // statics, strength, fluids
     courseModule: 'open channel flow'
 }
 
@@ -637,7 +637,7 @@ export default [
           [
             `!$y=1.407\\,\\mathsf{m}!$ (Pipe has maximum discharge at 93.8% depth.)`,
     
-            `<div class="width80"><img src="/images/circularGuidedPractice1maxQ.png" /></div><div class="clear" />
+            `<div class="width80"><img src="/images/circularGuidedPractice1MaxQ.png" /></div><div class="clear" />
     
                     $$\\begin{aligned}
                         \\alpha &= \\cos^{-1}\\frac{OA}{OB} = \\cos^{-1}\\frac{0.65700}{0.75000} = 28.836^{\\circ} \\\\\\\\

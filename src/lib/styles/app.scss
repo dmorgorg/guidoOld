@@ -59,8 +59,7 @@ body {
 
 .statics {
 
-    h3,
-    h4 {
+    h3 {
         color: var(--statics-primary);
     }
 
@@ -77,12 +76,18 @@ body {
 
         }
     }
+
+    .part-answer .katex {
+        color: var(--statics-primary);
+        // font-weight: 700;
+        font-size: 120%;
+        margin: 0;
+    }
 }
 
 .strength {
 
-    h3,
-    h4 {
+    h3 {
         color: var(--strength-primary);
     }
 
@@ -97,6 +102,13 @@ body {
         &:hover {
             background-color: var(--strength-primary);
         }
+    }
+
+    .part-answer .katex {
+        color: var(--strength-primary);
+        // font-weight: 700;
+        font-size: 120%;
+        margin: 0;
     }
 }
 
