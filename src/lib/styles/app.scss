@@ -109,9 +109,7 @@ body {
 
 .hide {
     // transition: all 3.5s ease-out;
-    position: absolute;
-    visibility: hidden;
-    transition: all 3s;
+    display: none;
 }
 
 .show {

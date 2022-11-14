@@ -85,9 +85,7 @@ body {
 }
 
 .hide {
-  position: absolute;
-  visibility: hidden;
-  transition: all 3s;
+  display: none;
 }
 
 .show {
