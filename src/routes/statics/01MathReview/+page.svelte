@@ -3,7 +3,7 @@
 	import Problem from "$lib/components/Problem.svelte";
 	import SubsectionHeader from "$lib/components/SubsectionHeader.svelte";
 
-	import problems, { topMatter } from "../../fluids/12OpenChannel/problems";
+	import problems, { topMatter } from "./problems";
 
 	let course = topMatter.course;
 </script>
