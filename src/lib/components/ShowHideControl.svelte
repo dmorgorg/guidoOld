@@ -42,6 +42,7 @@
             vertical-align: middle;
             padding: 0.075rem;
             margin-left: 1em;
+            margin-bottom: 0.5em;
             min-width: 8em;
             border: 1px solid black;
 

@@ -38,7 +38,7 @@
 
 <style lang="scss">
     div.box {
-        border: 1px solid black;
+        // border: 1px solid black;
         width: 80%;
         margin: -1em auto 2em auto;
         padding: 0 1em;
@@ -52,6 +52,7 @@
     }
     .show ~ .show {
         padding-top: 0;
+        border: none;
     }
     div.statement-line {
         display: flex;

@@ -1,9 +1,14 @@
 :root {
     --bg: #fff;
     --statics-primary: #800;
+    --statics-white: #eee8e8;
     --strength-primary: #880;
+    --strength-white: eeeee8
     --fluids-primary: #088;
+    --fluids-white: #e8eeee;
     --main-grey: #ddd;
+
+    --light-grey: #e8eeee;
     --off-black: #333;
     font-family: Arial, sans-serif;
     // font-size: 16px;
@@ -30,6 +35,26 @@ body {
     padding: 0;
 }
 
+.katex {
+    font-size: 105%;
+    padding: 0;
+    margin: 0;
+}
+
+.part-answer .katex {
+    background-color: var(--light-grey);
+    border: 2px solid black;
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+.answer .katex {
+    
+    border: 2px solid black;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+}
+
 .fluids {
     h3 {
         color: var(--fluids-primary);
@@ -45,15 +70,10 @@ body {
 
         &:hover {
             background-color: var(--fluids-primary);
-
         }
     }
-
-    .part-answer .katex {
-        color: var(--fluids-primary);
-        // font-weight: 700;
-        font-size: 120%;
-        margin: 0;
+    .part-answer .katex, .answer .katex, .problem-part-soln {
+        background-color: var(--fluids-white);
     }
 }
 
@@ -76,13 +96,10 @@ body {
 
         }
     }
-
-    .part-answer .katex {
-        color: var(--statics-primary);
-        // font-weight: 700;
-        font-size: 120%;
-        margin: 0;
+    .part-answer .katex, .answer .katex, .problem-part-soln {
+        background-color: var(--statics-white);
     }
+
 }
 
 .strength {
@@ -104,11 +121,8 @@ body {
         }
     }
 
-    .part-answer .katex {
-        color: var(--strength-primary);
-        // font-weight: 700;
-        font-size: 120%;
-        margin: 0;
+    .part-answer .katex, .answer .katex, .problem-part-soln {
+        background-color: var(--strength-white);
     }
 }
 
@@ -120,21 +134,18 @@ img {
     clear: both;
 }
 
-.katex {
-    font-size: 105%;
-    padding: 0;
-    margin: 0;
-    // font-weight: 700;
-}
-
 .hide {
-    // transition: all 3.5s ease-out;
     display: none;
+    // transition: all 3.5s ease-out;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .show {
-    // transition: all 3.5s ease-out;
     display: block;
+    visibility: visible;
+    opacity: 1;
+    // transition: all 3.5s ease-out;
 }
 
 .inline-block {
@@ -144,10 +155,6 @@ img {
 .fright {
     float: right;
 }
-
-
-
-
 
 .width100 {
     vertical-align: middle;

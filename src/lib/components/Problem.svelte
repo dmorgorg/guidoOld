@@ -4,6 +4,7 @@
 	import ProblemStatement from "./ProblemStatement.svelte";
 	import ShowHideControl from "./ShowHideControl.svelte";
 	import ProblemParts from "./ProblemParts.svelte";
+    import ProblemAnswer from "./ProblemAnswer.svelte";
 	export let problem;
 
 	let showHide = {
@@ -28,12 +29,11 @@
 				css to hide/show the solution 		-->
 		<div class:show={displaySolution} class:hide={!displaySolution}>
 			<ProblemParts {problem} />
-			<!-- <div slot="answer">answer is here</div> -->
 		</div>
 	{/if}
 
 	<div class:show={displayAnswer} class:hide={!displayAnswer}>
-		<slot name="answer" />
+		<ProblemAnswer {problem} />
 	</div>
 </section>
 
@@ -42,8 +42,10 @@
 		&.problem {
 			box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgba(0, 0, 0, 0.25);
 			margin: 1.25em 1.75em;
+			overflow-x: auto;
 			padding: 1rem;
 			padding-bottom: 1em;
+
 		}
 
 		
