@@ -1,3 +1,3 @@
 # guided practice examples 
 
-## _cutely_ named *guido"
+## _cutely_ named *guido*
