@@ -1,1 +1,11 @@
-<h2>landing page for guidedPractice site $$\\sqrt&lbrace;b^2-4ac\rbrace;$$</h2>
+<h1>Statics</h1>
+
+<ul>
+    <li><a href="./statics/01MathReview/">01 Math Review</a></li>
+</ul>
+
+<h1>Fluids</h1>
+
+<ul>
+    <li><a href="./fluids/12OpenChannel/">12 Open Channel</a></li>
+</ul>
