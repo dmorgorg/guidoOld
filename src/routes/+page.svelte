@@ -1,8 +1,8 @@
 <h1>Statics</h1>
 
-<ul>
+<!-- <ul>
     <li><a href="./statics/01MathReview/">01 Math Review</a></li>
-</ul>
+</ul> -->
 
 <h1>Fluids</h1>
 
